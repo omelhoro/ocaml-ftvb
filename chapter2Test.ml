@@ -28,7 +28,7 @@ let task5_fn = (fun (c, out) -> "test5" >:: (fun x -> assert_equal (is_con c) ou
 let task5 = "Task 5" >::: List.map task5_fn [('b', true); ('a', false); ('j', true); ('u', false)];;
 
 let task7_fn = (fun (c, out) -> "test7" >:: (fun x -> assert_equal (factSubZero c) out));;
-let task7 = "Task 7" >::: List.map task7_fn [(0, 0); (-4, 24); (-3, -6); (4, 23)];;
+let task7 = "Task 7" >::: List.map task7_fn [(0, 0); (-4, 24); (-3, -6); (4, 24)];;
 
 let _ =
   run_test_tt_main (test_list [task1; task2; task3; task4; task5; task7]);;
